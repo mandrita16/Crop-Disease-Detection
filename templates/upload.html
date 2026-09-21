@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Disease & Quality Analysis</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crop Disease & Quality Analysis</h1>
+        <p class="subtitle">Upload a leaf image and soil readings for a combined diagnosis</p>
+
+        <form id="analysisForm">
+            <div class="upload-box" id="dropZone">
+                <input type="file" id="imageInput" accept="image/*" required>
+                <p>Drag & drop a leaf image, or click to select</p>
+                <img id="previewImg" style="display:none; max-width: 200px; margin-top: 10px;">
+            </div>
+
+            <div class="tabular-grid">
+                <label>Nitrogen (N) <input type="number" name="N" step="0.1" required></label>
+                <label>Phosphorus (P) <input type="number" name="P" step="0.1" required></label>
+                <label>Potassium (K) <input type="number" name="K" step="0.1" required></label>
+                <label>Temperature (C) <input type="number" name="temperature" step="0.1" required></label>
+                <label>Humidity (%) <input type="number" name="humidity" step="0.1" required></label>
+                <label>pH <input type="number" name="ph" step="0.1" required></label>
+                <label>Rainfall (mm) <input type="number" name="rainfall" step="0.1" required></label>
+            </div>
+
+            <button type="submit" id="submitBtn">Analyze</button>
+        </form>
+
+        <div id="loadingSpinner" style="display:none;">
+            <div class="spinner"></div>
+            <p>Running models...</p>
+        </div>
+
+        <div id="results" style="display:none;"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+    <script src="/static/js/upload.js"></script>
+</body>
+</html>

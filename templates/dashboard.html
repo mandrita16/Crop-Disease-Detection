@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+    <div class="container wide">
+        <div class="dash-header">
+            <h1>Prediction Dashboard</h1>
+            <a href="/" class="back-link">&larr; New Analysis</a>
+        </div>
+
+        <div class="stats-row" id="statsRow"></div>
+
+        <div class="chart-row">
+            <div class="chart-box">
+                <h3>Disease Frequency</h3>
+                <canvas id="diseaseChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <h3>Quality Distribution</h3>
+                <canvas id="qualityChart"></canvas>
+            </div>
+        </div>
+
+        <h3>Recent Predictions</h3>
+        <table id="historyTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Timestamp</th>
+                    <th>Disease</th>
+                    <th>Soil Quality</th>
+                    <th>Final Verdict</th>
+                    <th>Review Needed</th>
+                </tr>
+            </thead>
+            <tbody id="historyBody"></tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
