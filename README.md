@@ -1,4 +1,7 @@
 # Crop Disease & Quality Analysis
+<div align="center">
+
+<img src="https://tenor.com/view/comer-curiosamente-vegetariano-insecto-comer-plantas-gif-20617716" width="500"/>
 
 End-to-end system combining:
 - **Computer Vision**: EfficientNet-B0 transfer learning on leaf images (PlantVillage) for disease classification, with Grad-CAM explainability
